@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="icon" href="icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body class="light">
+    <header>
+        <div class="header-container">
+            <h1 id="main-heading">Currency Converter</h1>
+            <i class="fa-solid fa-bars" id="settings-logo"></i>
+            <section class="settings-section hide">  
+                <div class="nav-bar">
+                    <button id="theme" class="menu">Change theme</button>
+                    <button id="default-currency" class="menu">Default currency</button>
+                    <button id="history" class="menu">History</button>
+                    <button id="clear-history" class="menu">Clear History</button>
+                    <button id="reset" class="menu">Reset Data</button>
+                    <button id="about" class="menu">About</button>
+                </div>
+            </section> 
+        </div>
+    </header>
+
+    <main>
+        <div class="about-wrapper hide">
+            <div class="abt-section">
+                <div class="intro">
+                    <h4 id="abt-heading">Currency Converter:</h4>
+                    <p>A fast and simple web app to convert currencies using real-time exchange rates.</p><br>
+                </div>
+                <pre>Built with:
+HTML, CSS, JavaScript
+Exchange Rate API, Flags API
+
+Developed by Naman Jain
+Version: v1.3.1
+                </pre>
+            </div>
+        </div>
+
+        <div class="history-wrapper">
+            <div class="history-section hide">
+                <pre id="convo"></pre>
+            </div>
+
+        </div>
+        
+        <div class="main-wrapper">
+            <div class="main-section">
+                <div class="form-section">
+                    <div class="from">
+                        <p>From:</p>
+                        <img src="https://flagsapi.com/AU/flat/64.png" class="img-size" id="fromFlag">
+                        <select class="fromValue">
+                            <option value="AUD" data-country="AU">AUD—Australia</option>
+                            <option value="BRL" data-country="BR">BRL—Brazil</option>
+                            <option value="CAD" data-country="CA">CAD—Canada</option>
+                            <option value="CHF" data-country="CH">CHF—Switzerland</option>
+                            <option value="CNY" data-country="CN">CNY—China</option>
+                            <option value="CZK" data-country="CZ">CZK—Czech Republic</option>
+                            <option value="DKK" data-country="DK">DKK—Denmark</option>
+                            <option value="GBP" data-country="GB">GBP—United Kingdom</option>                                
+                            <option value="HKD" data-country="HK">HKD—Hong Kong</option>
+                            <option value="HUF" data-country="HU">HUF—Hungary</option>
+                            <option value="IDR" data-country="ID">IDR—Indonesia</option>
+                            <option value="ILS" data-country="IL">ILS—Israel</option>
+                            <option value="INR" data-country="IN">INR—India</option>
+                            <option value="ISK" data-country="IS">ISK—Iceland</option>
+                            <option value="JPY" data-country="JP">JPY—Japan</option>
+                            <option value="KRW" data-country="KR">KRW—South Korea</option>
+                            <option value="MXN" data-country="MX">MXN—Mexico</option>
+                            <option value="MYR" data-country="MY">MYR—Malaysia</option>
+                            <option value="NOK" data-country="NO">NOK—Norway</option>
+                            <option value="NZD" data-country="NZ">NZD—New Zealand</option>
+                            <option value="PHP" data-country="PH">PHP—Philippines</option>
+                            <option value="PLN" data-country="PL">PLN—Poland</option>
+                            <option value="RON" data-country="RO">RON—Romania</option>
+                            <option value="SEK" data-country="SE">SEK—Sweden</option>
+                            <option value="SGD" data-country="SG">SGD—Singapore</option>
+                            <option value="THB" data-country="TH">THB—Thailand</option>
+                            <option value="TRY" data-country="TR">TRY—Turkey</option>
+                            <option value="USD" data-country="US">USD—United States</option>
+                            <option value="ZAR" data-country="ZA">ZAR—South Africa</option>
+                        </select>
+                    </div>
+                        
+                    <i class="fa-solid fa-arrow-right-arrow-left" id="exchange-logo"></i>
+                    
+                    <div class="to">
+                        <p>To:</p>
+                        <img src="https://flagsapi.com/AU/flat/64.png" class="img-size" id="toFlag">
+                        <select class="toValue">
+                            <option value="AUD" data-country="AU">AUD—Australia</option>
+                            <option value="BRL" data-country="BR">BRL—Brazil</option>
+                            <option value="CAD" data-country="CA">CAD—Canada</option>
+                            <option value="CHF" data-country="CH">CHF—Switzerland</option>
+                            <option value="CNY" data-country="CN">CNY—China</option>
+                            <option value="CZK" data-country="CZ">CZK—Czech Republic</option>
+                            <option value="DKK" data-country="DK">DKK—Denmark</option>
+                            <option value="GBP" data-country="GB">GBP—United Kingdom</option>
+                            <option value="HKD" data-country="HK">HKD—Hong Kong</option>
+                            <option value="HUF" data-country="HU">HUF—Hungary</option>
+                            <option value="IDR" data-country="ID">IDR—Indonesia</option>
+                            <option value="ILS" data-country="IL">ILS—Israel</option>
+                            <option value="INR" data-country="IN">INR—India</option>
+                            <option value="ISK" data-country="IS">ISK—Iceland</option>
+                            <option value="JPY" data-country="JP">JPY—Japan</option>
+                            <option value="KRW" data-country="KR">KRW—South Korea</option>
+                            <option value="MXN" data-country="MX">MXN—Mexico</option>
+                            <option value="MYR" data-country="MY">MYR—Malaysia</option>
+                            <option value="NOK" data-country="NO">NOK—Norway</option>
+                            <option value="NZD" data-country="NZ">NZD—New Zealand</option>
+                            <option value="PHP" data-country="PH">PHP—Philippines</option>
+                            <option value="PLN" data-country="PL">PLN—Poland</option>
+                            <option value="RON" data-country="RO">RON—Romania</option>
+                            <option value="SEK" data-country="SE">SEK—Sweden</option>
+                            <option value="SGD" data-country="SG">SGD—Singapore</option>
+                            <option value="THB" data-country="TH">THB—Thailand</option>
+                            <option value="TRY" data-country="TR">TRY—Turkey</option>
+                            <option value="USD" data-country="US">USD—United States</option>
+                            <option value="ZAR" data-country="ZA">ZAR—South Africa</option>
+                        </select>
+                    </div>
+                </div>
+                    
+                <div id="submit-section">
+                    <input type="number" placeholder="Enter Amount" id="amountVal">
+                    <button id="submit-btn">Get Exchange Rates</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="conversion-wrapper">
+            <div class="conversion">
+                <p class="exchangeRate hide"></p>
+                <p class="convertedAmount"></p>
+            </div>
+        </div>
+
+        <p class="date-updation"></p>
+    </main>
+
+    <script src="currency_converter.js"></script>
+</body>
+</html>
