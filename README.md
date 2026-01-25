@@ -34,16 +34,6 @@ Flags API – Country flag rendering
 
 LocalStorage – Persistent user data
 
-📂 Project Structure
-currency_converter/
-│
-├── index.html              # Main HTML file
-├── style.css               # Styling and responsiveness
-├── currency_converter.js   # Core logic and API handling
-├── light.jpg               # Light theme background
-├── dark.jpg                # Dark theme background
-└── README.md               # Project documentation
-
 🧑‍💻 How the App Works (User Flow)
 1️⃣ First-Time Load
 
