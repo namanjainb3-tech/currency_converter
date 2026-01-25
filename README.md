@@ -2,6 +2,8 @@
 
 A modern, responsive currency converter web application that fetches real-time exchange rates using a public API. Built with clean UI, smooth UX, persistent settings, and thoughtful features that make currency conversion fast and intuitive.
 
+live demo: https://namanjainb3-tech.github.io/currency_converter/
+
 🚀 Live Features Overview
 
 This application allows users to:
