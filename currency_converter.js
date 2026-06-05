@@ -268,7 +268,7 @@ async function renderUI() {
     submitBtn.disabled = true;
     submitBtn.innerText = "Fetching...";
 
-    const Base_URL = `https://api.frankfurter.app/latest?from=${changeFrom}&to=${changeTo}`;
+    const Base_URL = `https://api.frankfurter.dev/latest?from=${changeFrom}&to=${changeTo}`;
 
     try {
         const data = await getRate(Base_URL);
