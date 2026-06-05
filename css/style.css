@@ -15,7 +15,7 @@ body{
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("light.jpg");
+    url("../assets/images/light.jpg");
 }
 
 .dark{
@@ -24,7 +24,7 @@ body{
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("dark.jpg");
+    url("../assets/images/dark.jpg");
 }
 
 /*header*/
