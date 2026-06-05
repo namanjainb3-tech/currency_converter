@@ -14,7 +14,7 @@ https://namanjainb3-tech.github.io/currency_converter/
 ## 📸 Preview
 
 ```md
-![Currency Converter Preview](screenshots/homepage.png)
+![Currency Converter Preview](screenshots/homepage.jpeg)
 ```
 
 ---
